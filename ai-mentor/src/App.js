@@ -3,16 +3,13 @@ import React, { useContext } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 
-// Layout Components
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 
-// Auth Components
 import ForgotPassword from './components/auth/ForgotPassword';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 
-// Main Components
 import Dashboard from './components/dashboard/Dashboard';
 import About from './components/home/About';
 import Home from './components/home/Home';
@@ -25,10 +22,8 @@ import Resources from './components/resources/Resources';
 import Roadmap from './components/roadmap/Roadmap';
 import RoadmapDetail from './components/roadmap/RoadmapDetail';
 
-// Context
 import { AuthContext, AuthProvider } from './contexts/AuthContext';
 
-// Protected route component
 const ProtectedRoute = ({ children }) => {
   const { currentUser, loading } = useContext(AuthContext);
   
